@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head>
+    
+    <script src="p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&amp;display=swap" rel="stylesheet">
+    
+    <script src="jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    
+    <div class="container" id="play">
+      
+      <div class="heading">
+        MONTY HALL GAME
+      </div>
+      
+      <div class="doors">
+        <div class="backDoor" id="backDoor0"><div class="door" id="door0"><div class="ring"></div><div class="knob"></div></div><div class="prize" id="prize0"></div></div>
+        <div class="backDoor" id="backDoor1"><div class="door" id="door1"><div class="ring"></div><div class="knob"></div></div><div class="prize" id="prize1"></div></div>
+        <div class="backDoor" id="backDoor2"><div class="door" id="door2"><div class="ring"></div><div class="knob"></div></div><div class="prize" id="prize2"></div></div>
+      </div>
+      
+      <div class="choose" id="combined" style="display: none;">
+        <div class="electron"><button id="playAgain">PLAY AGAIN</button></div>
+        
+        <div class="neutron">Pick a Door</div>
+        
+        <div class="proton">
+          <div><button id="switch">SWITCH</button></div>
+          <div>OR</div>
+          <div><button id="stay">STAY</button></div>
+        </div>
+        
+        <div class="muon"><button onclick="Scroll();">CHECK RESULTS</button></div>
+      </div>
+      
+    </div>
+    
+     <div class="container" id="simulation">
+      
+      <div class="heading">
+        SIMULATE
+      </div>
+      
+      <div class="sliding">
+        <div id="simulate-value"></div>
+      </div>
+      
+      <div class="quark"> <button id="go" onclick="Go()">GO</button> </div>
+    
+      
+    </div>
+    
+    <div class="container" id="results">
+      
+      <div class="heading">
+        RESULTS
+      </div>
+      
+      <div class="tables">
+        <table>
+          <tbody><tr>
+            <th></th>
+            <th>Won</th>
+            <th>Played</th>
+            <th>Win %</th>
+          </tr>
+          <tr>
+            <th>Switch</th>
+            <td id="switch0">0</td>
+            <td id="switch1">0</td>
+            <td id="switch2">0</td>
+          </tr>
+          <tr>
+            <th>Stay</th>
+            <td id="stay0">0</td>
+            <td id="stay1">0</td>
+            <td id="stay2">0</td>
+          </tr>
+        </tbody></table>
+      </div>
+      
+      <div class="choose">
+        <div><button id="resetTable">RESET TABLE</button></div>   
+    </div>
+      
+    </div>
+    
+    <script defer="" src="Door.js"></script>
+    <script defer="" src="Game.js"></script>
+    <script defer="" src="sketch.js"></script>
+    
+  
+
+</body></html>
